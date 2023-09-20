@@ -2,6 +2,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -22,6 +23,7 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+    font-family: 'Roboto', sans-serif;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -29,7 +31,7 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-	line-height: 1;
+	line-height: 1.5;
 }
 ol, ul {
 	list-style: none;
@@ -49,7 +51,11 @@ table {
 
 /* main css goes here: */
 
+
 #main-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 1px;
     border: 5px solid red;
     width: 210mm;
     height: 297mm;
@@ -58,28 +64,88 @@ table {
 
 /* title css */
 #title-wrap {
-    border: 3px solid green;
+    height: 10%;
+    /* border: 3px solid green; */
     display: flex;
     justify-content: space-between;
     /* margin: 60px; */
+}
+
+/* logo css */
+#invoice {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#invoice > h3 {
+    /* margin-top: 10px; */
+    font-size: 30px;
+    color: gray;
+}
+
+#logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: grey;
+    height: 100px;
+    width: 100px;
+    border: 3px solid gray;
+    border-radius: 50%;
+    margin-right: 50px;
+}
+
+#logo > h3 {
+   font-size: 25px;
+   color: white;
 }
 
 /* adress css */
 #adress-wrap {
-    border: 3px solid greenyellow;
+    height: 12%;
+    margin: 30px 0px;
+    /* border: 3px solid greenyellow; */
     display: flex;
     justify-content: space-between;
+    color: rgb(0, 0, 63);
     /* margin: 60px; */
+}
+
+#date {
+    text-align: center;
+    font-weight: 700;
+}
+
+#date > h4, #date >h5 {
+    margin-bottom: 20px;
+    /* margin-right: 60px; */
+    padding: 0px 60px;
+    border-bottom: 1px solid black;
 }
 
 /* shiping wrap */
 #shipping-wrap {
-    border: 3px solid yellow;
+    height: 15%;
+    /* border: 3px solid yellow; */
     display: flex;
     justify-content: space-between;
 }
 
+.ship {
+    width: 350px;
+    border-bottom: 1px solid rgb(109, 109, 109);
+    margin-bottom: 20px;
+    color: rgb(0, 0, 63);
+    font-weight: 700;
+}
+
 /* table css */
+#table {
+    margin: 30px 0px;
+    /* height: 30%; */
+}
 table {
     width: 100%;
 }
@@ -91,3 +157,25 @@ table, tr, th, td {
 .invisible {
     border: none;
 }
+
+.center {
+vertical-align: middle;
+/* text-align: end; */
+background-color: rgb(216, 233, 248);
+font-weight: 600;
+}
+
+.top {
+    background-color: rgb(29, 84, 235);
+    color: white;
+    font-weight: 600;
+}
+
+.grey {
+    background-color: rgb(235, 235, 235);
+}
+
+.end {
+    text-align: end;
+}
+
